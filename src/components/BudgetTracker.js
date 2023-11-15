@@ -32,7 +32,10 @@ const BudgetTracker = () => {
     setBalance(newBudget - expenses.reduce((total, expense) => total + expense.amount, 0));
   };
   const showSuccess = () => {
-    toast.current.show({severity:'success', summary: 'Success', detail:'Message Content', life: 3000});
+    toast.current.show({severity:'success', summary: 'Success', detail:'Kayıt Eklendi', life: 3000});
+}
+const showWarn = () => {
+  toast.current.show({severity:'warn', summary: 'Warning', detail:'Kayıt silindi', life: 3000});
 }
 
   const addExpense = () => {
@@ -57,6 +60,7 @@ const BudgetTracker = () => {
     const updatedExpenses = expenses.filter((_, i) => i !== index);
     setExpenses(updatedExpenses);
     setBalance(balance + deletedExpense.amount);
+    showWarn()
   };
 
   const toast = useRef(null);
