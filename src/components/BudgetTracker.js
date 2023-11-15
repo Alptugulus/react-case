@@ -108,9 +108,9 @@ const BudgetTracker = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 flex items-center justify-center bg-black">
+          <div className="w-1/2 flex items-center justify-center bg-black  px-5">
             <div>
-              <h2 className="text-2xl mb-4 text-lime-green text-start">Giderler</h2>
+              <h2 className="text-2xl mb-4 text-lime-green text-start  px-5 ">Giderler</h2>
               <table className="w-full">
                <thead className="flex content-between">
                <tr>
